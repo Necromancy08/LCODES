@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Proposal</title>
+    <style>
+        body {
+    font-family: Sophia;
+    font-color: #FF0000; /* Red */
+    text-align: center;
+    margin: 0;
+    height: 100vh; /* Set height to the full viewport height */
+    display: flex;
+}
+
+.left-side, .right-side, .center {
+    flex: 1;
+    height: 100%;
+}
+
+.left-side, .right-side, .center {
+    border: 3px solid #000000; /* Black border */
+}
+
+.left-side {
+    background: url('https://i.pinimg.com/originals/fb/02/47/fb02473b93a01c4413d81ce0fb46b4bf.gif') center/cover no-repeat; /* Adjust the image path */
+}
+
+.right-side {
+ background: url('https://i.pinimg.com/originals/fb/02/47/fb02473b93a01c4413d81ce0fb46b4bf.gif') center/cover no-repeat; /* Adjust the image path */
+}
+
+.center {
+    background-color: #00A86B; /* Jade Green */
+    width: 6cm;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    color: black;
+    margin-bottom: 20px; /* Add margin at the bottom of the heading */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    background-color: #000000; /* Black border */
+            color: #FF0000; /* Red */
+}
+
+#noButton {
+    display: inline-block;
+}
+
+#noButton.hidden {
+    display: none;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="left-side">
+</div>
+    <div class="center">
+        <h1>Can I not be mine?</h1>
+        <button onclick="sayYes()">Yes</button>
+        <button id="noButton" onclick="sayNo()">No</button>
+
+    </div>
+    <div class="right-side">
+     
+</div>
+    
+
+    <script>
+        function sayYes() {
+            alert("I'm so happy you said yes! 💖");
+        }
+
+        function sayNo() {
+            alert("Sorry to hear that. 😢");
+        }
+
+        // Hide the 'No' button after 5 seconds
+        setTimeout(function() {
+            document.getElementById("noButton").classList.add("hidden");
+        }, 5000);
+    </script>
+</body>
+</html>
